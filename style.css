@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    margin: 2rem;
+}
+.user-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    /* border: solid; */
+}
+.title-of-expence{
+    min-width: 70%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    height: 3.2rem;
+    min-height: 3.2rem;
+    outline: none;
+    font-size: 1.1rem;
+    resize: vertical;
+    overflow: hidden;
+}
+.date-of-expence, .expence-amount{
+    outline: none;
+}
+.date-of-expence:focus, 
+.expence-amount:focus, 
+.title-of-expence:focus{
+    border: 2px solid lightblue;
+}
+.expence, .money{
+    overflow-y: hidden;
+    max-width: 10rem;
+}
+.expence::-webkit-scrollbar,
+.money::-webkit-scrollbar{
+    background-color: lightblue;
+    height: .5rem;
+    cursor: pointer;
+}
+.expence::-webkit-scrollbar-thumb,
+.money::-webkit-scrollbar-thumb{
+    background-color: rgba(128, 128, 128, .4);;
+    height: .5rem;
+    cursor: pointer;
+}
+.date-and-amount{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    gap: 3rem;
+}
+.first-label{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.date-of-expence,
+.expence-amount{
+    width: 16rem;
+    font-size: 1.2rem;
+}
+.date-of-expence{
+    cursor: pointer;
+}
+.submit-btn{
+    /* font-size: 1.2rem; */
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.result{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.result-table{
+    width: 70%;
+    border: 2px solid  rgb(132, 214, 255);
+}
+.table-header{
+    background-color: rgb(132, 214, 255);
+    font-size: 1.4rem;
+}
+.table-header th{
+    padding: .5rem;
+    font-weight: 300;
+}
+.table-content td{
+    padding: .3rem;
+    text-align: center;
+}
+.table-content:nth-child(odd){
+    height: 2rem;
+    background-color: rgba(128, 128, 128, .4);
+}
+.table-content td i{
+    cursor: pointer;
+    transition: .3s;
+}
+.table-content td i:hover{
+    color: coral;
+}
+.money-label, .date-label{
+    font-size: 1.2rem;
+}
+@media (max-width: 1100px) {
+    .first-label{
+        font-size: 3rem;
+        margin-top: 8rem;
+    }
+    .title-of-expence{
+        width: 90%;
+        font-size: 2rem;
+        height: 4rem;
+    }
+    .date-and-amount{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .money-label, .date-label{
+        font-size: 2rem;
+    }
+    .submit-btn{
+        font-size: 1.5rem;
+    }
+    .result-table{
+        width: 100%;
+    }
+}
